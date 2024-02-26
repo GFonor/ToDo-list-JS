@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+    <main>
+        <div class="heading">
+            <h1 class="headong__name">Tasks</h1>
+            <button class="heading__clear-btn" id="heading__clear-btn"><img src="images/rocket.png" alt="image of rocket"></button>
+        </div>
+
+        <form class="input-block">
+            <h6>Note:</h6>
+            <input id="task-input" type="text">
+            <!-- <p id="error-paragraph" class="error-paragraph">Please, write your task</p> -->
+            <button type="submit" id="enter-btn" class="enter-btn">Enter</button>
+        </form>
+
+        <div id="taskList" class="task-list">
+            <ul id="list" class="list" role="listbox"></ul>
+        </div>     
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
