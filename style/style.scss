@@ -137,3 +137,10 @@ main {
     }
 }
 
+@media screen and (max-width: 500px) {
+    main {
+        padding: 1rem;
+        min-width: 280px;
+    }
+}
+
