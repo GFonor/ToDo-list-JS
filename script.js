@@ -3,7 +3,7 @@ let enterBtn = document.getElementById('enter-btn');
 let taskInput = document.getElementById('task-input');
 let taskList = document.getElementById('list');
 
-function deleteChild() {
+function deleteChilds() {
     let child = taskList.lastElementChild;
     while (child) {
         taskList.removeChild(child);
@@ -11,22 +11,43 @@ function deleteChild() {
     }
 }
 
+function addTask() {
+    if (taskInput.value != '') {
+        let listItem = `
+        <li class="task-list__item">
+            <p>${taskInput.value}</p>
+            <div class="list-item__buttons">
+                <button class="task-btn" data-action="done"><img src="images/tick.png" alt="tick image"></button>
+                <button class="task-btn" data-action="delete"><img src="images/cross.png" alt="cross image"></button>
+            </div>
+        </li>
+        `
+        taskList.insertAdjacentHTML("beforeend", listItem);
+        taskInput.value = '' ;
+        taskInput.placeholder = '';
+    } else {
+        taskInput.placeholder = 'Please, write your task';
+    }
+}
+
 clearBtn.onclick = () => {
     clearBtn.blur();
-    deleteChild()
+    deleteChilds();
 }
 
 enterBtn.onclick = (e) => {
     e.preventDefault();
     enterBtn.blur();
-    if (taskInput.value != '') {
-        let liLast = document.createElement('li');
-        liLast.innerHTML = taskInput.value;
-        taskList.append(liLast);
-        taskInput.select()
-    } else {
-        taskInput.placeholder = 'Please, write your task';
-        taskInput.placeholder.style.color = 'red'
-    }
+    addTask();
 }
+
+taskList.addEventListener('click', (e) => {
+    let target = e.target;
+    if (target.dataset.action === 'done') {
+        target.parentNode.parentNode.firstElementChild.style.textDecoration = 'line-through'
+        target.parentNode.parentNode.style.color = 'red'
+    } else if (e.target.dataset.action === 'delete') {
+        target.parentNode.parentNode.remove()
+    }
+})
 
