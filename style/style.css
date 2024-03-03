@@ -147,12 +147,17 @@ main {
   pointer-events: none;
 }
 
+.task-done-style {
+  text-decoration: line-through;
+  color: rgb(255, 109, 109);
+}
+
 @media screen and (max-width: 500px) {
   main {
     padding: 1rem;
     min-width: 280px;
   }
-  .heading__name {
+  .heading h1 {
     font-size: 2.25rem;
   }
 }/*# sourceMappingURL=style.css.map */

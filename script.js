@@ -43,9 +43,10 @@ enterBtn.onclick = (e) => {
 
 taskList.addEventListener('click', (e) => {
     let target = e.target;
+    let taskText = e.target.parentNode.parentNode.firstElementChild;
+    console.log(taskText)
     if (target.dataset.action === 'done') {
-        target.parentNode.parentNode.firstElementChild.style.textDecoration = 'line-through'
-        target.parentNode.parentNode.style.color = 'red'
+        taskText.classList.contains('task-done-style') ? taskText.classList.remove('task-done-style') : taskText.classList.add('task-done-style');
     } else if (e.target.dataset.action === 'delete') {
         target.parentNode.parentNode.remove()
     }
