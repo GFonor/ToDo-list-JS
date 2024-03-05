@@ -6,6 +6,10 @@
   --light-pink: rgb(242, 243, 255);
 }
 
+.dp-none {
+  display: none;
+}
+
 button:focus, input:focus {
   outline: none;
 }
@@ -150,6 +154,14 @@ main {
 .task-done-style {
   text-decoration: line-through;
   color: rgb(255, 109, 109);
+}
+
+.empty-task-list {
+  padding: 0.9375rem 0.3125rem;
+  margin-bottom: 0.3125rem;
+  border: 2px solid #710083;
+  border-radius: 0.375rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 500px) {
