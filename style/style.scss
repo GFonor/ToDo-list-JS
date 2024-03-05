@@ -137,7 +137,7 @@ main {
     }
 }
 
-.task-list__item {
+.list__item {
     background-color: var(--light-pink);
     margin: calc(10rem / 16) calc(5rem / 16);
     padding: calc(7rem / 16);
@@ -148,10 +148,17 @@ main {
     align-items: center;
     p {
        margin-bottom: 0;
+       padding: 0 0.5rem;
     }
 }
 
-.task-btn {
+.list__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(5rem / 16);
+}
+
+.list__btn {
     padding: 0;
     img {
         width: 40px;

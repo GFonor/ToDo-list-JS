@@ -16,11 +16,11 @@ function deleteChilds() {
 function addTask() {
     if (taskInput.value != '') {
         let listItem = `
-        <li class="task-list__item">
+        <li class="list__item">
             <p>${taskInput.value}</p>
-            <div class="list-item__buttons">
-                <button class="task-btn" data-action="done"><img src="images/tick.png" alt="tick image"></button>
-                <button class="task-btn" data-action="delete"><img src="images/cross.png" alt="cross image"></button>
+            <div class="list__buttons">
+                <button class="list__btn" data-action="done"><img src="images/tick.png" alt="tick image"></button>
+                <button class="list__btn" data-action="delete"><img src="images/cross.png" alt="cross image"></button>
             </div>
         </li>
         `

@@ -129,7 +129,7 @@ main {
   flex-direction: column;
 }
 
-.task-list__item {
+.list__item {
   background-color: var(--light-pink);
   margin: 0.625rem 0.3125rem;
   padding: 0.4375rem;
@@ -139,14 +139,21 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-.task-list__item p {
+.list__item p {
   margin-bottom: 0;
+  padding: 0 0.5rem;
 }
 
-.task-btn {
+.list__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3125rem;
+}
+
+.list__btn {
   padding: 0;
 }
-.task-btn img {
+.list__btn img {
   width: 40px;
   pointer-events: none;
 }
