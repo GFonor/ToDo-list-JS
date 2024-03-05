@@ -179,4 +179,7 @@ main {
   .heading h1 {
     font-size: 2.25rem;
   }
+  .list__btn img {
+    width: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
